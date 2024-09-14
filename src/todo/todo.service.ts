@@ -18,7 +18,7 @@ export class TodoService {
 
   //takes a parameter of todo of type Todo, returns a promise of a single todo created
   async create(todo: Todo): Promise<Todo> {
-    return await this.TodoRepository.create(todo);
+    return await this.TodoRepository.save(todo);
   }
 
   //take an id parameter
