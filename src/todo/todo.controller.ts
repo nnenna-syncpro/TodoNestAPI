@@ -29,7 +29,7 @@ export class TodoController {
 
   //get one todo by id parameter
   @Get(':id')
-  async getById(@Param() id: number): Promise<Todo> {
+  async getById(@Param('id') id: number): Promise<Todo> {
     return await this.TodoService.getById(id);
   }
 

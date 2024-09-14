@@ -24,6 +24,8 @@ export class TodoService {
   //take an id parameter
   async getById(id: number): Promise<Todo> {
     return await this.TodoRepository.findOne({ where: { id: id } });
+    // return await this.TodoRepository.findOneBy({ id: id });
+    // return await this.TodoRepository.findOneOrFail({ where: { id: id } });
   }
 
   async update(id: number, todo: Todo): Promise<UpdateResult> {
